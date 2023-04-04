@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../styles/code.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <div><a href="../index.html">Home</a></div>
+    <div><a href="../art/art.html">Art</a></div>
+    <div><a href="../project/project.html">Project</a></div>
+    <div><a href="../contact/contact.html">Contact</a></div>
+  </header>
+  <main>
+    <div class="textbox">
+      <p>The Python script below is an image scraper that can download images from Google Images. It uses the Selenium
+        library to automate interactions with the Google Images website and the requests library to download the actual
+        image files. The script defines a class ImageScraper with two methods.</p>
+
+      <p>The first method, fetch_image_urls, takes a search query, a maximum number of links to fetch, and an optional
+        web
+        driver (in this case, a Chrome driver). It uses the web driver to load the Google Images website and execute a
+        search for the given query. Then it scrolls down the page to load more image thumbnails, clicks on each
+        thumbnail
+        to load the full-size image, and extracts the URLs of the full-size images. It continues this process until it
+        has
+        fetched the maximum number of links or it can no longer find any more images. If it finds the maximum number of
+        links, it returns the set of URLs. If it can't find the maximum number of links, it returns None.</p>
+
+      <p>The second method, persist_image, takes a folder path and a URL for an image file. It uses the requests library
+        to download the image file from the URL and the PIL (Python Imaging Library) library to open and manipulate the
+        image file. It then saves the image file to the specified folder path, using a hashed version of the image
+        file's
+        content as the file name.</p>
+
+      <p>Overall, this script provides a simple and automated way to scrape images from Google Images and save them to a
+        local folder. It can be useful for a variety of applications, such as data analysis, computer vision, or machine
+        learning. </p>
+    </div>
+    <div class="codebox scraper">
+      <img src="../images/code/imagescraper1.png" alt="First picture of python code of image scraper" width="1262"
+        height="1428">
+      <img src="../images/code/imagescraper2.png" alt="First picture of python code of image scraper" width="1260"
+        height="940">
+    </div>
+    <div class="textbox">
+      <p>The code you provided is a Python program that creates a mosaic image from a main image and
+        a set of tile images.
+        The mosaic image is created by replacing each pixel of the main image with a tile image that has the most
+        similar
+        dominant color to that pixel.</p>
+      <p>The program uses several libraries such as glob, PIL (Python Imaging Library), scipy, and numpy. The 'glob'
+        library is used to retrieve all tile image paths. The 'PIL' library is used to import, resize, and create
+        images.
+        The 'scipy' library is used to create a KDTree to find the closest tile image to each pixel in the main image.
+        The
+        'numpy' library is used to manipulate arrays and store data.</p>
+      <p>The program first prompts the user to input the size of the tile images. It then defines the path of the main
+        image and the directory path of the tile images. The program retrieves all tile image paths from the directory
+        path using the 'glob' library. The program then imports and resizes all tile images to the specified size.</p>
+      <p>Next, the program calculates the dominant color of each tile image by computing the mean color of each image.
+        It
+        then pixelates (resizes) the main image to match the dimensions of the tile images. The program creates a KDTree
+        using the dominant colors of the tile images.</p>
+      <p>The program then loops through each pixel of the pixelated main image and finds the closest tile image to that
+        pixel using the KDTree. It stores the index of the closest tile image in a 2D array called 'closest_tiles'.</p>
+      <p>Finally, the program creates a new output image with the same size as the main image. It loops through each
+        pixel
+        of the 'closest_tiles' array and pastes the corresponding tile image at the corresponding location in the output
+        image. The program then saves the output image to the specified path.</p>
+      <p>Overall, this program demonstrates how to use various Python libraries and algorithms to create an image
+        mosaic.
+      </p>
+    </div>
+    <div class="codebox mosaic">
+      <img src="../images/code/mosaic1.png" alt="First picture of python code of image scraper" width="1280"
+        height="1378">
+      <img src="../images/code/mosaic2.png" alt="First picture of python code of image scraper" width="1274"
+        height="358">
+    </div>
+  </main>
+</body>
+
+</html>

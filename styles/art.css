@@ -151,3 +151,8 @@ h1 {
 h2 {
   color: rgb(51, 113, 141);
 }
+
+.current a {
+  color: rgb(184, 136, 63);
+  font-size: 2vw;
+}

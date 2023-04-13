@@ -146,3 +146,8 @@ button {
   font-family: "Quicksand", sans-serif;
   padding: 5px;
 }
+
+.current a {
+  color: rgb(184, 136, 63);
+  font-size: 2vw;
+}

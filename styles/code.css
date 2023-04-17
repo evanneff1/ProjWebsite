@@ -126,7 +126,7 @@ tr {
 }
 
 .points {
-  padding: 0px 200px 0 200px;
+  padding: 0px 100px 0 100px;
 }
 th {
   padding: 20px;
@@ -149,5 +149,5 @@ button {
 
 .current a {
   color: rgb(184, 136, 63);
-  font-size: 2vw;
+  font-size: 33px;
 }
